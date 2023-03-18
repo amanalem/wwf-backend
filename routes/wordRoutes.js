@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const wordCtrl = require("../controllers/wordCtrl");
+const wordCtrl = require("../controllers/wordCtrl.js");
 
 // index
 router.get("/", wordCtrl.index);
