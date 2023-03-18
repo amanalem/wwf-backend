@@ -1,0 +1,14 @@
+const mongoose = require("mongoose");
+
+require("dotenv").config();
+
+const monoURI = process.env.REACT_APP_DB_URL;
+
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+  })
+  .then((instance) => {
+    console.log(`connected on ${instance.connections[0].name}`);
+  })
+  .catch((err) => console.log(`ERROR: See details, ${err}`));
