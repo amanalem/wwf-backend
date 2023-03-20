@@ -4,7 +4,11 @@ const index = (req, res) => {};
 
 const show = (req, res) => {};
 
-const create = (req, res) => {};
+const create = async (req, res) => {
+  let newWord = await Word.create(req.body);
+
+  res.json(newWord);
+};
 
 const update = (req, res) => {};
 
