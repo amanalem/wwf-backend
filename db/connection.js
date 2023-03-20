@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 require("dotenv").config();
 
-const monoURI = process.env.REACT_APP_DB_URL;
+const mongoURI = process.env.REACT_APP_DB_URL;
 
 mongoose
   .connect(mongoURI, {
