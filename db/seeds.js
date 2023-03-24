@@ -3,7 +3,8 @@ const Word = require("../models/Word.js");
 
 Word.deleteMany({})
   .then(() => {
-    Word.insertMany([
+    console.log("Seeds.js started");
+    return Word.insertMany([
       { word: "three" },
       { word: "later" },
       { word: "sound" },
